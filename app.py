@@ -20,9 +20,8 @@ st.markdown(
 API_URL = "https://router.huggingface.co/hf-inference/models/facebook/bart-large-cnn"
 
 #  Add API key
-HEADERS = {"Authorization": "Bearer YOUR_ACESSS_TOKEN"}
-
-
+import os
+HEADERS = {"Authorization": f"Bearer {st.secrets['HF_API_KEY']}"}
 
 # Function to call Hugging Face API
 #def summarize(text, max_len, min_len):
